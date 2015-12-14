@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ufm-HU-61F">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--TextView Animation-->
+        <scene sceneID="klv-HD-nhh">
+            <objects>
+                <tableViewController storyboardIdentifier="TextViewAnimatedStoryboard" title="TextView Animation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ufm-HU-61F" customClass="TextViewAnimatedTableViewController" customModule="TextFieldLabelAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hsb-rR-7nf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="scrollIndicatorInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="T3p-q7-ns3">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TextView Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRW-hU-zYp">
+                                    <rect key="frame" x="225" y="19.5" width="150.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="NRW-hU-zYp" firstAttribute="centerY" secondItem="T3p-q7-ns3" secondAttribute="centerY" id="9LR-Ll-SJB"/>
+                                <constraint firstItem="NRW-hU-zYp" firstAttribute="centerX" secondItem="T3p-q7-ns3" secondAttribute="centerX" id="wtd-49-MRq"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnimatedCellId" rowHeight="58" id="apf-JM-eci" userLabel="AnimatedCell" customClass="AnimatedTableViewCell" customModule="TextFieldLabelAnimation" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="600" height="58"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="apf-JM-eci" id="S57-sg-gbc">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="57.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Text Value" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwy-vS-MsA">
+                                            <rect key="frame" x="20" y="16" width="560" height="40"/>
+                                            <accessibility key="accessibilityConfiguration" label="RecipientsName"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" enablesReturnKeyAutomatically="YES"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="ufm-HU-61F" id="Yaw-Pc-A0P"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="su7-cO-K6g">
+                                            <rect key="frame" x="20" y="2" width="50" height="12"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="su7-cO-K6g" firstAttribute="leading" secondItem="dwy-vS-MsA" secondAttribute="leading" id="2Az-sX-8mh"/>
+                                        <constraint firstItem="su7-cO-K6g" firstAttribute="top" secondItem="S57-sg-gbc" secondAttribute="top" constant="2" id="UfQ-he-amo"/>
+                                        <constraint firstAttribute="trailing" secondItem="dwy-vS-MsA" secondAttribute="trailing" constant="20" id="h4D-Uf-JgC"/>
+                                        <constraint firstItem="dwy-vS-MsA" firstAttribute="leading" secondItem="S57-sg-gbc" secondAttribute="leading" constant="20" id="iDr-DB-1ZO"/>
+                                        <constraint firstAttribute="bottom" secondItem="dwy-vS-MsA" secondAttribute="bottom" constant="2" id="idX-cp-Yy4"/>
+                                        <constraint firstItem="dwy-vS-MsA" firstAttribute="top" secondItem="S57-sg-gbc" secondAttribute="top" constant="16" id="oWD-NE-g85"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="su7-cO-K6g" id="61P-df-nIw"/>
+                                    <outlet property="textValue" destination="dwy-vS-MsA" id="7B2-3o-XeC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ufm-HU-61F" id="Aqm-UW-phf"/>
+                            <outlet property="delegate" destination="ufm-HU-61F" id="Wud-aS-ylo"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fLw-66-8z1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="318"/>
+        </scene>
+    </scenes>
+</document>
